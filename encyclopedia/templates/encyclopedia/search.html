@@ -1,0 +1,17 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Encyclopedia
+{% endblock %}
+
+{% block body %}
+    <h1>Search Results</h1>
+    <div style="border-bottom: 2px solid;"></div>
+
+    <ul class="list-group list-group-flush">
+        {% for article in articles %}
+            <li class="list-group-item"><a href= "/{{ article }}" >{{ article }}</a></li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}
