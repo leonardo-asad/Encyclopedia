@@ -44,9 +44,6 @@ def entries(request, article):
     """ Shows the content of the article and redirect to the edition page in case is required"""
     if request.method == "POST":
 
-        path = request.path
-        breakpoint()
-
         title = request.POST['title']
 
         text = util.get_entry(title)
